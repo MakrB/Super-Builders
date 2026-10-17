@@ -5,8 +5,8 @@ permissions:
   actions: write
 
 on:
-  workflow_dispatch:
-    inputs:
+  workflow_dispatch: "android14-6.1.157 (2025-12)"
+    inputs: 
       kernel_target: "android14-6.1.157 (2025-12)"
         description: "Kernel target"
         type: choice
