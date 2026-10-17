@@ -7,7 +7,7 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
-      kernel_target:
+      kernel_target: "android14-6.1.157 (2025-12)"
         description: "Kernel target"
         type: choice
         default: "android12-5.10.209 (2024-05)"
@@ -134,11 +134,11 @@ on:
           - "android16-6.12.38 (2025-08)"
           - "android16-6.12.38 (2025-09)"
           - "android16-6.12.58 (2025-12)"
-      quick_target:
+      quick_target: "android14-6.1.157 (2025-12)"
         description: "Quick select — type e.g. android15-6.6.58 (overrides dropdown)"
         type: string
         default: ""
-      ksu_variant:
+      ksu_variant: KernelSU-Next
         description: "KernelSU variant"
         type: choice
         options:
@@ -148,27 +148,27 @@ on:
           - ReSukiSU
           - WKSU
         default: "KernelSU-Next"
-      add_susfs:
+      add_susfs: true
         description: "Add SUSFS"
         type: boolean
         default: true
-      add_zeromount:
+      add_zeromount: true
         description: "Add ZeroMount"
         type: boolean
         default: true
-      add_zram:
+      add_zram: true
         description: "Add ZRAM with LZ4K"
         type: boolean
         default: true
-      add_bbg:
+      add_bbg: true
         description: "Add Baseband Guard"
         type: boolean
         default: true
-      add_overlayfs_support:
+      add_overlayfs_support: true
         description: "Add overlayfs support"
         type: boolean
         default: true
-      add_kpm:
+      add_kpm: false
         description: "Add KPM (SukiSU/ReSukiSU)"
         type: boolean
         default: false
@@ -178,9 +178,9 @@ on:
         default: ""
   workflow_call:
     inputs:
-      kernel_target:
+      kernel_target: "android14-6.1.157 (2025-12)"
         type: string
-        default: "android12-5.10.209 (2024-05)"
+        default: "android14-6.1.157 (2025-12)"
       quick_target:
         type: string
         default: ""
