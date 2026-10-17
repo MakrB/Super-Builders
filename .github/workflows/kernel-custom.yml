@@ -4,7 +4,7 @@ permissions:
   contents: write
   actions: write
 
-on:
+on: true
   workflow_dispatch: "android14-6.1.157 (2025-12)"
     inputs: 
       kernel_target: "android14-6.1.157 (2025-12)"
